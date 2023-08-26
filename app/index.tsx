@@ -28,11 +28,6 @@ export default function Index(): JSX.Element {
 
   return (
     <Container>
-      <Stack.Screen
-        options={{
-          title: t('HOME'),
-        }}
-      />
       <Content>
         <SwitchToggle
           isOn={themeType === 'dark'}
@@ -44,19 +39,6 @@ export default function Index(): JSX.Element {
             );
             changeThemeType(nextTheme);
           }}
-        />
-        <Button
-          style={css`
-            margin-top: 28px;
-            margin-bottom: 40px;
-          `}
-          styles={{
-            text: css`
-              font-family: Pretendard-Bold;
-            `,
-          }}
-          text={t('SEE_DETAILS')}
-          onPress={() => push('/details')}
         />
       </Content>
     </Container>
